@@ -15,7 +15,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className={style.IaChat}>
-                <a href="">Bora Conversar?</a>
+                <a href="" className={style.ChatButton}>Boraa Conversar?</a>
             </div>
         </nav>
     </div>
