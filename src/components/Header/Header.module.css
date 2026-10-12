@@ -16,20 +16,32 @@
     color: white;
 }
 
+.navMenu{
+    position: relative;
+}
+
 .list{
     display: flex;
+    width: inherit;
     flex-direction: row;
+    justify-content: center;
     list-style-type: none;
+    padding: 5px 0px;
     gap: 20px;
+    overflow: hidden;
+    font-weight: bold;
 }
 
 a{
     text-decoration: none;
 }
 
-a:hover{
+.listItem:hover{
     text-decoration: underline;
     text-underline-offset: 5px;
+    animation: underlineUp 150ms forwards;
+    color: #00A3FF;
+    transition: 150ms ;
 }
 
 a,
@@ -39,6 +51,28 @@ a:active{
 }
 
 .ChatButton{
-    padding: 10px 15px;
-    background-color: #00A3FF;
+    padding: 5px 9px;
+    background: transparent;
+    border: 1px solid #00A3FF;
+    border-radius: 10px;
+}
+
+.ChatButton:hover{
+    box-shadow: 0 2px 10px rgba(0, 163, 255, 0.5);
+    transition: 150ms;
+}
+
+.active {
+  color: #00A3FF;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  position: relative;
+}
+
+@keyframes underlineUp {
+    to{
+        text-underline-offset: 5px;
+    }from{
+        text-underline-offset: 15px;
+    }
 }
